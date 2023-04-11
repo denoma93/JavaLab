@@ -45,3 +45,11 @@ public class Fordonsregister {
 		
 	}
 }
+
+/*
+ Det är denna klass som innehåller själva registret. Storleken på registret ska skickas med när
+man skapar det och klassen ska också hålla reda på hur många fordon som för närvarande
+finns i registret (Klassen Fordonsregister har ett aggregatförhållande med klassen Fordon).
+ovan metoder ska också finnas i klassen.
+(skapa array[]=register{10}
+ */
