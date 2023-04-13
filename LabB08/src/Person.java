@@ -1,6 +1,6 @@
 
 public class Person {
-	private Person owner;
+	
 	int age;
 	String name;
 

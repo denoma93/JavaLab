@@ -1,5 +1,10 @@
+import java.util.ArrayList;
 
 public class Fordonsregister {
+	private ArrayList<Fordon> reg;
+	public Register() {
+		reg=new ArrayList<Fordon>();
+	}
 	
 	// add: lägger till nytt fordon
 	// pre: ägare till ett visst fordon skapad, registret inte fullt
@@ -51,5 +56,4 @@ public class Fordonsregister {
 man skapar det och klassen ska också hålla reda på hur många fordon som för närvarande
 finns i registret (Klassen Fordonsregister har ett aggregatförhållande med klassen Fordon).
 ovan metoder ska också finnas i klassen.
-(skapa array[]=register{10}
  */
