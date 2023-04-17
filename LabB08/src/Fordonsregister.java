@@ -1,15 +1,40 @@
-import java.util.ArrayList;
+
+import java.util.Scanner;
 
 public class Fordonsregister {
-	private ArrayList<Fordon> reg;
-	public Register() {
-		reg=new ArrayList<Fordon>();
+	Fordon[] fordreg;
+	int antal; 
+	
+	//konstruktor
+	public Fordonsregister() {
+		fordreg=new Fordon[3];
+		antal=0;
 	}
 	
 	// add: lägger till nytt fordon
 	// pre: ägare till ett visst fordon skapad, registret inte fullt
 	// post: Fordonet tillagt i registret
-	public void add(String regnr, String märke, String typ, Person ägare) {
+	public void add() {
+	//public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Ange Fordonstyp: "); 
+		String typ = scanner.nextLine();
+		
+		
+		System.out.println("Ange Märke på ditt fordon: "); 
+		String marke = scanner.nextLine();
+		
+		System.out.println("Ange registreringsnummer på ditt fordon: "); 
+		String regnr = scanner.nextLine();
+		
+		System.out.println("Is this your vehicle? "+typ+marke+regnr );
+		//for loop för att lägga in data i Arrayn?
+		//hur spara flera variabler på EN plats i Arrayn??
+		
+		scanner.close();
+
+		
 		
 	}
 	
@@ -49,6 +74,7 @@ public class Fordonsregister {
 	public String skrivUt(int pos) {
 		
 	}
+	
 }
 
 /*
