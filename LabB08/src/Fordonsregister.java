@@ -2,12 +2,12 @@
 import java.util.Scanner;
 
 public class Fordonsregister {
-	Fordon[] fordreg;
-	int antal; 
+	private Fordon[] fordreg;
+	private int antal;
 	
 	//konstruktor
-	public Fordonsregister() {
-		fordreg=new Fordon[3];
+	public Fordonsregister(int max) {
+		fordreg=new Fordon[max];
 		antal=0;
 	}
 	
@@ -15,37 +15,49 @@ public class Fordonsregister {
 	// pre: ägare till ett visst fordon skapad, registret inte fullt
 	// post: Fordonet tillagt i registret
 	public void add() {
-	//public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
+		//Skapa ägare
+		System.out.println("Skapa ny owner genom att ange din Age och Name: ");
+		int age = scanner.nextInt();
+		String name= scanner.nextLine();
+		
+		Person p=new Person(age, name);
+		
+		//Skapa fordon 
 		System.out.println("Ange Fordonstyp: "); 
-		String typ = scanner.nextLine();
-		
-		
-		System.out.println("Ange Märke på ditt fordon: "); 
+		String fordonstyp = scanner.nextLine();
+		System.out.println("Ange marke pa ditt fordon: "); 
 		String marke = scanner.nextLine();
-		
-		System.out.println("Ange registreringsnummer på ditt fordon: "); 
+		System.out.println("Ange registreringsnummer pa ditt fordon: "); 
 		String regnr = scanner.nextLine();
-		
-		System.out.println("Is this your vehicle? "+typ+marke+regnr );
-		//for loop för att lägga in data i Arrayn?
-		//hur spara flera variabler på EN plats i Arrayn??
-		
 		scanner.close();
-
 		
+		Fordon f = new Fordon(regnr, fordonstyp, p, marke);
 		
-	}
+		//Lägg in Fordon i arrayn
+		fordreg[antal]=f;
+		antal++;
 	
+		//Skriver ut hela arrayn register
+		for (int i=0; i<antal; i++) {
+			System.out.println(fordreg[i].Skriv());
+			}
+
+	}	
+			
+	
+	
+	
+
 	// remove: tar bort ett fordon
 	// pre: position laglig (0 <=pos && pos < size())
 	// post: fordon på position pos borttagen
 	// ägare på högre positioner har skiftats ner för att undvika
 	// “hål” i lagringsutrymmet.
 	public void remove(int pos) {
-		
-	}
+
+	    }
 	
 	// getFordon: hämtar fordonet på position pos i registret
 	// pre: position laglig (0 <=pos && pos < size())

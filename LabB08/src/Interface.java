@@ -3,7 +3,7 @@ public class Interface {
 
 	public static void main(String[] args) {
 	
-		Fordonsregister fordreg = new Fordonsregister();
+		Fordonsregister fordreg = new Fordonsregister(3);
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Hello and welcome to fordonsregistrering! Please select a number to start...");
