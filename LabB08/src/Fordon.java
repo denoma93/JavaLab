@@ -22,10 +22,6 @@ public class Fordon {
 			}  
 	
 //Metod som returnerar fordons egenskaper
-	public void fordon(String regnr, String fordonstyp, String owner, String marke) {
-		System.out.println("Bilens regnummer är: "+this.regnr+"fordonstypen är "+this.fordonstyp); 
-		System.out.println("Bilens ägare är: "+this.owner+ "och märket på bilen är "+this.marke);
-		}	
 	public String Skriv() {
 		return "Bilens ägare är: "+this.owner.getName()+this.owner.getAge()+ "och märket på bilen är "+this.marke +"Bilens regnummer är: "+this.regnr+"fordonstypen är "+this.fordonstyp;
 	}

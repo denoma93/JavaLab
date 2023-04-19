@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Interface {
 
 	public static void main(String[] args) {
-	
+		
 		Fordonsregister fordreg = new Fordonsregister(3);
 		Scanner scanner = new Scanner(System.in);
 		
@@ -15,23 +15,22 @@ public class Interface {
 		
 		int val = scanner.nextInt(); 
 		
-		
 	while(val!=0){
 		switch (val) {
-		  case 1: //lägg till fordon
+		case 1: //lägg till fordon
 			 fordreg.add();
-			  //System.out.println("here is where fordon is added to register!");
-			break;
+		 break;
 		  case 2: //ta bort fordon
 			 System.out.println("here is where fordon is removed from register!");
 			// remove();
 			break;
 		  case 3: //print info om ett (specifikt?) fordon
-			  System.out.println("here is where info about a specific fordon will be displayed!");
+			 System.out.println("here is where info about a specific fordon will be displayed!");
 			  //getFordon();
 			break;
 		  case 4: //print hela register
-			  System.out.println("here is where the whole register will be displayed!");
+			 // System.out.println("here is where the whole register will be displayed!");
+				fordreg.printArray();
 		    break;
 		  default: 
 			System.out.println("you have to choose a number 1-4. please try again.");
