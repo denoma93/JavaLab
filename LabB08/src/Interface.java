@@ -14,37 +14,42 @@ public class Interface {
 		System.out.println("Choose 0 to exit.");
 		
 		int val = scanner.nextInt(); 
-		//Klistra in text till menyn, används INTE i metoderna i sig!!
+	
 	while(val!=0){
 		switch (val) {
-		case 1: //lägg till fordon. klistra in från add()
+		case 1: //lägg till fordon. 
 			//Skapa ägare
-			System.out.println("Skapa ny owner genom att ange din Age och Name: ");
+			System.out.println("Börja med att genom att ange din ålder och namn: ");
 			int age = scanner.nextInt();
 			String name= scanner.nextLine();
 			
 			//Skapa fordon 
 			System.out.println("Ange Fordonstyp: "); 
 			String fordonstyp = scanner.nextLine();
-			System.out.println("Ange marke pa ditt fordon: "); 
+			System.out.println("Ange märke på ditt fordon: "); 
 			String marke = scanner.nextLine();
-			System.out.println("Ange registreringsnummer pa ditt fordon: "); 
+			System.out.println("Ange registreringsnummer på ditt fordon: "); 
 			String regnr = scanner.nextLine();
 			Person p=new Person(age, name);
 			fordreg.add(regnr, marke, fordonstyp, p);
 		 break;
 		  case 2: //ta bort fordon
-			 System.out.println("here is where fordon is removed from register!");
-			// remove();
+			  fordreg.printArray();
+			  	
+			    System.out.print("Vilket fordon vill du ta bort? Ange fordones position i listan: ");
+				Scanner tgb = new Scanner(System.in);
+				int position;
+				position=tgb.nextInt();
+				
+				fordreg.remove(position);
+				fordreg.printArray();
 			break;
-		  case 3: //print info om ett (specifikt?) fordon
-			// System.out.println("here is where info about a specific fordon will be displayed!");
+		  case 3: //print info om ett fordon
 			 System.out.println("Vilket fordon vill du läsa om? Ange position med ett heltal.");
-				pos=scanner.nextInt();
-				pos.skrivUt();
+				int pos=scanner.nextInt();
+				fordreg.skrivUt(pos);
 			break;
 		  case 4: //print hela register
-			 // System.out.println("here is where the whole register will be displayed!");
 				fordreg.printArray();
 		    break;
 		  default: 
@@ -52,12 +57,10 @@ public class Interface {
 		}
 		System.out.println("Choose another option or press 0 to exit.");
 		val =scanner.nextInt(); 	
-		//här blir det fel efter att val 1 har gjorts.
 		}
 		if (val==0) {
 		System.out.println("Thank you, come again!");
 	}
-	//scanner.close();
 }
 }
 

@@ -19,14 +19,11 @@ public class Fordon {
 			}
 		public Person getOwner() {
 			return owner; 
-			}  
-		public String getFordon() {
-			return Fordon;
-			}  
+			}    
 	
 //Metod som returnerar fordons egenskaper
 	public String Skriv() {
-		return "Bilens ägare är: "+this.owner.getName()+this.owner.getAge()+ "och märket på bilen är "+this.marke +"Bilens regnummer är: "+this.regnr+"fordonstypen är "+this.fordonstyp;
+		return "Bilens ägare är: "+this.owner.getName()+this.owner.getAge()+ " år gammal. \nMärket på bilen är "+this.marke +"\nBilens regnummer är: "+this.regnr+"\nFordonstypen är "+this.fordonstyp;
 	}
 
 	}
