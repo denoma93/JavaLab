@@ -38,8 +38,10 @@ public class Interface {
 			// remove();
 			break;
 		  case 3: //print info om ett (specifikt?) fordon
-			 System.out.println("here is where info about a specific fordon will be displayed!");
-			  //getFordon();
+			// System.out.println("here is where info about a specific fordon will be displayed!");
+			 System.out.println("Vilket fordon vill du läsa om? Ange position med ett heltal.");
+				pos=scanner.nextInt();
+				pos.skrivUt();
 			break;
 		  case 4: //print hela register
 			 // System.out.println("here is where the whole register will be displayed!");

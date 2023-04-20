@@ -20,6 +20,9 @@ public class Fordon {
 		public Person getOwner() {
 			return owner; 
 			}  
+		public String getFordon() {
+			return Fordon;
+			}  
 	
 //Metod som returnerar fordons egenskaper
 	public String Skriv() {

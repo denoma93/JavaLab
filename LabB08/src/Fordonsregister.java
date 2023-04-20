@@ -27,9 +27,7 @@ public class Fordonsregister {
 		//Skriver ut hela arrayn fordreg
 		for (int i=0; i<antal; i++) {
 			System.out.println(fordreg[i].Skriv());
-			
 			}
-
 	}	
 			
 	// remove: tar bort ett fordon
@@ -44,7 +42,7 @@ public class Fordonsregister {
 	// getFordon: hämtar fordonet på position pos i registret
 	// pre: position laglig (0 <=pos && pos < size())
 	// post: Fordonet på position pos returnerad
-	public Fordon getFordon(int pos) {//KLAR
+	public Fordon getFordon(int pos) {
 		if(0>=pos&&pos>size()) {
 			return fordreg[pos];
 		}
@@ -78,25 +76,14 @@ public class Fordonsregister {
 	// pre: position laglig (0 <=pos && pos < size())
 	// post: fordonet på position pos returnerad
 	public String skrivUt(int pos) {//KLAR
-		Scanner scanner = new Scanner(System.in);
+		return fordreg[pos].getFordon();
 		
-	//	return vektor[pos].getFordon();
-
-		
-		System.out.println("Vilket fordon vill du läsa om? Ange position med ett heltal.");
-		pos=scanner.nextInt();
-		scanner.close();
-		if (pos>=0&&pos<size()) {	
-			return fordreg[pos].Skriv();	
-		}
-		else {
-			return null;
 		}	
-	}
+	
 	
 	//Skriver ut det som är sparat i hela arrayn
 	public void printArray() {//KLAR
-		for (int i=0; i<antal; i++) {
+		for (int i=0;i<antal; i++) {
 			System.out.println(fordreg[i].Skriv());  
 		}
 	}
