@@ -7,7 +7,7 @@ public class Fordon {
 	 private String marke;
  
 //konstruktor
-		Fordon(String regnr, String fordonstyp, Person owner, String marke){
+		public Fordon(String regnr, String fordonstyp, Person owner, String marke){
 			this.regnr=regnr;
 			this.fordonstyp=fordonstyp;
 			this.owner=owner;

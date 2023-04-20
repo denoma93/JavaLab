@@ -9,34 +9,16 @@ public class Fordonsregister {
 	public Fordonsregister(int max) {
 		fordreg=new Fordon[max];
 		antal=0;
-		
-		//finns i registret (Klassen Fordonsregister har ett aggregatförhållande med klassen Fordon)
 	}
 	
 	// add: lägger till nytt fordon
 	// pre: ägare till ett visst fordon skapad, registret inte fullt
 	// post: Fordonet tillagt i registret
 	
-	public void add() { //KLAR
-		Scanner scanner = new Scanner(System.in);
+	public void add(String regnr, String marke, String fordonstyp, Person owner) { //KLAR
 		
-		//Skapa ägare
-		System.out.println("Skapa ny owner genom att ange din Age och Name: ");
-		int age = scanner.nextInt();
-		String name= scanner.nextLine();
-		
-		Person p=new Person(age, name);
-		
-		//Skapa fordon 
-		System.out.println("Ange Fordonstyp: "); 
-		String fordonstyp = scanner.nextLine();
-		System.out.println("Ange marke pa ditt fordon: "); 
-		String marke = scanner.nextLine();
-		System.out.println("Ange registreringsnummer pa ditt fordon: "); 
-		String regnr = scanner.nextLine();
-		scanner.close();
-		
-		Fordon f = new Fordon(regnr, fordonstyp, p, marke);
+//		Person p=new Person(age, name);
+		Fordon f = new Fordon(regnr, fordonstyp, owner, marke);
 		
 		//Lägg in Fordon i arrayn
 		fordreg[antal]=f;
@@ -97,6 +79,9 @@ public class Fordonsregister {
 	// post: fordonet på position pos returnerad
 	public String skrivUt(int pos) {//KLAR
 		Scanner scanner = new Scanner(System.in);
+		
+	//	return vektor[pos].getFordon();
+
 		
 		System.out.println("Vilket fordon vill du läsa om? Ange position med ett heltal.");
 		pos=scanner.nextInt();

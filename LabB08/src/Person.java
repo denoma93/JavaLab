@@ -18,7 +18,12 @@ public class Person {
 	}
 	public int getAge() {
 		return age;
+}
+	public static void main(String[] args) {
+		Person p = new Person(26,"nils");
+		System.out.println("du heter"+p.getName()+"och är"+p.getAge()+ "år");
 	}
+		
 }
 
 

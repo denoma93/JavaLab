@@ -14,11 +14,24 @@ public class Interface {
 		System.out.println("Choose 0 to exit.");
 		
 		int val = scanner.nextInt(); 
-		
+		//Klistra in text till menyn, används INTE i metoderna i sig!!
 	while(val!=0){
 		switch (val) {
-		case 1: //lägg till fordon
-			 fordreg.add();
+		case 1: //lägg till fordon. klistra in från add()
+			//Skapa ägare
+			System.out.println("Skapa ny owner genom att ange din Age och Name: ");
+			int age = scanner.nextInt();
+			String name= scanner.nextLine();
+			
+			//Skapa fordon 
+			System.out.println("Ange Fordonstyp: "); 
+			String fordonstyp = scanner.nextLine();
+			System.out.println("Ange marke pa ditt fordon: "); 
+			String marke = scanner.nextLine();
+			System.out.println("Ange registreringsnummer pa ditt fordon: "); 
+			String regnr = scanner.nextLine();
+			Person p=new Person(age, name);
+			fordreg.add(regnr, marke, fordonstyp, p);
 		 break;
 		  case 2: //ta bort fordon
 			 System.out.println("here is where fordon is removed from register!");
@@ -42,7 +55,7 @@ public class Interface {
 		if (val==0) {
 		System.out.println("Thank you, come again!");
 	}
-	scanner.close();
+	//scanner.close();
 }
 }
 
